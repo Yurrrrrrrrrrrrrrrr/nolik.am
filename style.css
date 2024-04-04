@@ -1,0 +1,155 @@
+body{
+        background:url(img.jpg);
+
+}
+.play-btn {
+    font-size: 24px;
+    padding: 15px 30px;
+    background-color: gold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.play-btn:hover {
+    background-color: goldenrod;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.mode-btn {
+    font-size: 20px;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    background-color: #3498db;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    transition: background-color 0.3s;
+}
+
+.mode-btn:hover {
+    background-color: #2980b9;
+}
+
+.board {
+    border: 1px solid;
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    border: 0px solid #333;
+    border-radius: 10px;
+    background-color: #fff;
+    background-size: cover;
+    width: 1px;
+    height: 1px;
+    margin-left: 80vh;
+
+
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #85c1e9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+        box-shadow: 5px 5px 10px 1px #000000;
+
+}
+
+.cell:hover {
+    background-color: #3498db;
+}
+
+.reset-btn {
+    font-size: 18px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #e74c3c;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    transition: background-color 0.3s;
+}
+
+.reset-btn:hover {
+    background-color: #c0392b;
+}
+
+.hidden {
+    display: none;
+}
+.animate-board {
+    animation: scaleAnimation 3s ease-out;
+}
+
+@keyframes scaleAnimation {
+    0% { transform: scale(3); }
+    100% { transform: scale(1); }
+}
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.overlay.hidden {
+    display: none;
+}
+
+#resultMessage {
+    background-color: white;
+    padding: 100px;
+    border-radius: 10px;
+    text-align: center;
+
+    
+}
+
+#closeResultBtn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #3498db;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 16px;
+}
+
+#closeResultBtn:hover {
+    background-color: #2980b9;
+}
+.result-win {
+    background:url(mort.gif);
+        background-size:cover;
+
+}
+
+.result-draw {
+    background-image: url(draw.gif);
+    background-size:cover;
+}
